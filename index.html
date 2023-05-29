@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <title>Document</title>
+    <title>Ticket</title>
     <!-- Javascript-->
     <script defer src="js/script.js"></script>   	
 </head>
@@ -15,40 +15,46 @@
     <div class="container mt-4">
 
         <!-- Scheda-->
-        <div>
-            <div>
-                <label for="name">Nome e Cognome</label>
-                <input id="name" type="text" placeholder="Francesco Marco Gravina">
-            </div>
-
-            <div>
-                <label for="km">Chilometri da percorrere</label>
-                <input id="km" type="number" value="10">
-            </div>
-
-            <div>
-                <label for="age">Età</label>
-                <input id="age" type="number" value="42">
+        <div class="sheet">
+            <h2 class="mb-5">Calcola il prezzo del tuo biglietto</h2>
+            <div class="wrapper">
+                <div>
+                    <label for="name">Nome e Cognome</label>
+                    <input id="name" type="text" placeholder="Francesco Marco Gravina">
+                </div>
                 
+                <div>
+                    <label for="km">Chilometri da percorrere</label>
+                    <input id="km" type="number" value="10">
+                </div>
+                
+                <div>
+                    <label for="age">Età</label>
+                    <input id="age" type="number" value="42">
+                    
+                </div>
             </div>
             <input id="button" type="submit" value="Genera" />
         </div>
 
         <!-- Ticket-->
         <div class="ticket">
+            <h2 class="mb-5">Il tuo biglietto</h2>
+            <div class="wrapper">
 
-            <p>
-                Nome: <span id="namePlaceHolder"> </span>
-            </p>
-
-            <p>
-                Chilometri: <span id="kmPlaceHolder"> </span>
-            </p>
-
-            <p>
-                Totale: <span id="pricePlaceHolder"></span>
-            </p>
-
+                <p>
+                    Nome Passeggero: <span id="namePlaceHolder"> </span>
+                </p>
+                
+                <p>
+                    Chilometri: <span id="kmPlaceHolder"> </span>
+                </p>
+                
+                <p>
+                    Totale: <span id="pricePlaceHolder"></span>
+                </p>
+                
+            </div>
         </div>
 
     </div>
