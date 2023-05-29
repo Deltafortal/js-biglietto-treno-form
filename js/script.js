@@ -3,9 +3,7 @@ console.log('JS OK');
 
 const button = document.getElementById('button');
 const kmPrice = 0.21;
-let km = parseInt(document.getElementById('km'));
-const name = document.getElementById('name');
-let age = document.getElementById('age');
+let sPrice;
 
 // ! Validation
 
@@ -14,6 +12,25 @@ let age = document.getElementById('age');
 
 button.addEventListener('click', function(){
 
-    let sPrice = km * kmPrice;
-    document.getElementById('pricePlaceHolder').innerText = sPrice.toFixed(2);
+    const name = document.getElementById('name').value;
+    let km = parseInt(document.getElementById('km').value);
+    let age = document.getElementById('age').value;
+    sPrice = km * kmPrice;
+    let tPrice;
+
+    if (age < 18) {
+        tPrice = sPrice - (sPrice * 0.2);
+        console.log(tPrice);
+        } 
+    else if (age > 64) {
+        tPrice = sPrice - (sPrice * 0.4);
+        console.log(tPrice);
+    } else {
+        tPrice = sPrice;
+        }
+
+    document.getElementById('namePlaceHolder').innerText = name;
+    document.getElementById('kmPlaceHolder').innerText = km;
+    document.getElementById('pricePlaceHolder').innerText = tPrice.toFixed(2);
+
 })

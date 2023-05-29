@@ -12,30 +12,44 @@
     <script defer src="js/script.js"></script>   	
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-4">
+
+        <!-- Scheda-->
         <div>
             <div>
-                <label for="name"></label>
+                <label for="name">Nome e Cognome</label>
                 <input id="name" type="text" placeholder="Francesco Marco Gravina">
             </div>
 
             <div>
-                <label for="km"></label>
+                <label for="km">Chilometri da percorrere</label>
                 <input id="km" type="number" value="10">
             </div>
 
             <div>
-                <label for="age"></label>
-                <select name="age" id="age">
-                    <option value="minorenne">Minorenne</option>
-                    <option value="maggiorenne">Maggiorenne</option>
-                    <option value="over65">Over 65</option>
-                </select>
+                <label for="age">Età</label>
+                <input id="age" type="number" value="42">
+                
             </div>
-            <input id="button" type="submit" value="Send Request" />
+            <input id="button" type="submit" value="Genera" />
         </div>
 
-        <p id="pricePlaceHolder"></p>
+        <!-- Ticket-->
+        <div class="ticket">
+
+            <p>
+                Nome: <span id="namePlaceHolder"> </span>
+            </p>
+
+            <p>
+                Chilometri: <span id="kmPlaceHolder"> </span>
+            </p>
+
+            <p>
+                Totale: <span id="pricePlaceHolder"></span>
+            </p>
+
+        </div>
 
     </div>
 </body>
